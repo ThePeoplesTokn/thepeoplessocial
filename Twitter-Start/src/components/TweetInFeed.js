@@ -1,11 +1,13 @@
 import React from "react";
-import "./TweetInFeed.css";
-import golf from "../images/golf.png";
+import "./TweetInFeed.css"; 
+import golf from "../images/golf.png"; 
 import canoe from "../images/canoe.png";
 import { defaultImgs } from "../defaultimgs";
 import { Icon } from "web3uikit";
 import { useMoralis } from "react-moralis";
-import { useEffect, useState } from "react";
+import { useEffect, useState } from "react"; 
+
+
 
 const TweetInFeed = ({ profile }) => {
   const [tweetArr, setTweetArr] = useState();
@@ -36,7 +38,7 @@ const TweetInFeed = ({ profile }) => {
         return (
           <>
             <div className="feedTweet">
-              <img src={e.attributes.tweeterPfp ? e.attributes.tweeterPfp : defaultImgs[0]} className="profilePic"></img>
+              <img src={e.attributes.tweeterPfp ? e.attributes.tweeterPfp : defaultImgs[0]} alt=""className="profilePic"></img>
               <div className="completeTweet">
                 <div className="who">
                 {e.attributes.tweeterUserName.slice(0, 6)}
@@ -53,6 +55,7 @@ const TweetInFeed = ({ profile }) => {
                 {e.attributes.tweetImg && (
                         <img
                           src={e.attributes.tweetImg}
+                          alt=""
                           className="tweetImg"
                         ></img>
                       )}
@@ -66,7 +69,7 @@ const TweetInFeed = ({ profile }) => {
                     12
                   </div>
                   <div className="interactionNums">
-                    <Icon fill="#3f3f3f" size={20} svg="matic" />
+                    <Icon fill="#3f3f3f" size={20} svg="bnb" />
                   </div>
                 </div>
               </div>

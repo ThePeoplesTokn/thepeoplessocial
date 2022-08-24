@@ -33,7 +33,7 @@ const Settings = () => {
 
     const fetchNFTs = async () => {
       const options = {
-        chain: "mumbai",
+        chain: "bnb",
         address: account
       }
 
