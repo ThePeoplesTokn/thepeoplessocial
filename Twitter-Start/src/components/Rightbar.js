@@ -1,39 +1,39 @@
 import React from "react";
 import './Rightbar.css';
-import spaceshooter from "../images/spaceshooter.jpeg";
-import netflix from "../images/netflix.jpeg";
-import academy from "../images/academy.png";
-import youtube from "../images/youtube.png";
-import js from "../images/js.png";
+import thepeoplesswap from "../images/thepeoplesswap.png";
+import thepeoplesbank from "../images/thepeoplesbank.png";
+import thepeoplesdonate from "../images/thepeoplesdonate.png";
+import thepeoplesstake from "../images/thepeoplesstake.png";
+import thepeopleslotto from "../images/thepeopleslotto.png";
 import { Input } from "web3uikit";
 
 
 const Rightbar = () => {
   const trends = [
     {
-      img: spaceshooter,
-      text: "Learn how to build a Web3 FPS game using unity...",
-      link: "https://moralis.io/moralis-projects-learn-to-build-a-web3-space-fps-game/",
+      img: thepeoplesswap,
+      text: "Swap your BSC Tokens in an instant and help a good cause...",
+      link: "https://thepeoplesswap.netlify.app",
     },
     {
-      img: netflix,
-      text: "The fisrt Moralis Project! Let's Netflix and chill...",
-      link: "https://moralis.io/moralis-projects-learn-to-build-a-web3-netflix-clone/",
+      img: thepeoplesbank,
+      text: "Deposit your BNB and earn up to 15% ThePeoplesToken(TPT) in rewards...",
+      link: "https://thepeoplesbank.netlify.app",
     },
     {
-      img: academy,
-      text: "Master DeFi in 2022. Start  at the Moralis Academy...",
-      link: "https://academy.moralis.io/courses/defi-101",
+      img: thepeoplesdonate,
+      text: "Donate BNB and help the homeless...",
+      link: "https://thepeoplesdonate.netlify.app",
     },
     {
-      img: js,
-      text: "Become a Web3 Developer with just simple JS...",
-      link: "https://academy.moralis.io/all-courses",
+      img: thepeopleslotto,
+      text: "Raffles, Slots, Poker and more!! Try your luck at ThePeoplesLotto...",
+      link: "https://thepeopleslotto.com",
     },
     {
-      img: youtube,
-      text: "Best youtube channel to learn about Web3...",
-      link: "https://www.youtube.com/channel/UCgWS9Q3P5AxCWyQLT2kQhBw",
+      img: thepeoplesstake,
+      text: "Stake your BNB and earn up to 15% back...",
+      link: "https://thepeoplesstake.netlify.app",
     },
   ];
 
@@ -41,8 +41,8 @@ const Rightbar = () => {
     <>
     <div className="rightbarContent">
       <Input
-        label="Search Twitter"
-        name ="Search Twitter"
+        label="Search ThePeoplesPlace"
+        name ="Search ThePeoplesPlace"
         prefixIcon="search"
         labelBgColor="#141d26" 
         >
@@ -54,7 +54,7 @@ const Rightbar = () => {
           return(
             <>
             <div className="trend" onClick={() => window.open(e.link)}>
-              <img src={e.img} className="trendImg"></img>
+              <img src={e.img} alt=""className="trendImg"></img>
               <div className="trendText">{e.text}</div>
             </div>
             </>

@@ -1,13 +1,11 @@
 import React from "react";
+
+// eslint-disable-next-line no-unused-vars
 import { Link } from "react-router-dom";
 import "./Settings.css";
 import { useState, useRef, useEffect } from "react";
 import { Input } from "web3uikit";
-import pfp1 from "../images/pfp1.png";
-import pfp2 from "../images/pfp2.png";
-import pfp3 from "../images/pfp3.png";
-import pfp4 from "../images/pfp4.png";
-import pfp5 from "../images/pfp5.png";
+
 import { defaultImgs } from "../defaultimgs";
 import { useMoralis, useMoralisWeb3Api } from "react-moralis";
 
@@ -45,7 +43,7 @@ const Settings = () => {
     }
 
     fetchNFTs();
-
+// eslint-disable-next-line react-hooks/exhaustive-deps
   },[isAuthenticated, account])
 
   const onBannerClick = () => {
@@ -117,6 +115,7 @@ const Settings = () => {
                 <>
                 <img
                 src={e}
+                alt=""
                 className={
                   selectedPFP === e ? "pfpOptionSelected" : "pfpOption"
                 }
@@ -133,6 +132,7 @@ const Settings = () => {
           <div className="pfpOptions">
             <img
               src={selectedFile}
+              alt=""
               onClick={onBannerClick}
               className="banner"
             ></img>

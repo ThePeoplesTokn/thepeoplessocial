@@ -7,7 +7,8 @@ import Sidebar from "./components/Sidebar";
 import Rightbar from "./components/Rightbar";
 import "./App.css";
 import { useMoralis } from "react-moralis";
-import { ConnectButton, Icon } from "web3uikit";
+import { ConnectButton } from "web3uikit";
+import tpt from "./images/tpt.png"
 
 const App = () => {
   const { isAuthenticated, Moralis } = useMoralis();
@@ -42,7 +43,8 @@ const App = () => {
       </div>
       ) : (
         <div className="loginPage">
-          <Icon fill="#ffffff" size={40} svg="twitter" />
+          <img src={tpt} alt="thepeoplestoken logo" height={75} width={75} className=""></img>
+          
           <ConnectButton />
         </div>
 

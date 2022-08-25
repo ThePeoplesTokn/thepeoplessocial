@@ -1,0 +1,2 @@
+(this.webpackJsonpThePeoplesSocial=this.webpackJsonpThePeoplesSocial||[]).push([[12],{1315:function(n,o){},1325:function(n,o){},1352:function(n,o){},1354:function(n,o){}}]);
+//# sourceMappingURL=12.0598ba6d.chunk.js.map

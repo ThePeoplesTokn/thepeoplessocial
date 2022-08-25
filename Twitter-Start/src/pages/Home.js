@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.css";
 import { defaultImgs } from "../defaultimgs";
-import { TextArea, Icon } from "web3uikit";
+import { Icon, Input } from "web3uikit";
 import { useState, useRef } from "react";
 import TweetInFeed from "../components/TweetInFeed";
 import { useMoralis, useWeb3ExecuteFunction } from "react-moralis";
@@ -112,18 +112,18 @@ const Home = () => {
     <div className="pageIdentify">Home</div>
       <div className="mainContent">
         <div className="profileTweet">
-          <img src={user.attributes.pfp ? user.attributes.pfp : defaultImgs[0]} className="profilePic"></img>
+          <img src={user.attributes.pfp ? user.attributes.pfp : defaultImgs[0]} alt=""className="profilePic"></img>
           <div className="tweetBox">
-            <TextArea
-              label=""
+            <Input
+              label="Post your thoughts here.."
               name="tweetTxtArea"
-              value="GM World"
+              labelBgColor="#141d26"
               type="text"
               onChange={(e) => setTweet(e.target.value)}
-              width="95%"
-            ></TextArea>
+              width="100%"
+            ></Input>
             {selectedFile && (
-              <img src={selectedFile} className="tweetImg"></img>
+              <img src={selectedFile} alt=""className="tweetImg"></img>
             )}
             <div className="imgOrTweet">
               <div className="imgDiv" onClick={onImageClick}>
@@ -137,9 +137,9 @@ const Home = () => {
                 <Icon fill="#1DA1F2" size={20} svg="image"></Icon>
               </div>
               <div className="tweetOptions">
-                <div className="tweet" onClick={saveTweet}>Tweet</div>
-                <div className="tweet" onClick={maticTweet} style={{ backgroundColor: "#8247e5" }}>
-                  <Icon fill="#ffffff" size={20} svg="matic" />
+                <div className="tweet" onClick={saveTweet}>Post</div>
+                <div className="tweet" onClick={maticTweet} style={{ backgroundColor: "#f0b90b" }}>
+                  <Icon fill="#ffffff" size={20} svg="bnb" />
                 </div>
               </div>
             </div>
